@@ -50,8 +50,35 @@
             ご依頼の可否をご確認いただけます。<br>
             下記のフォームにご依頼でご使用されたメールアドレスを送信すると、可否の状況をご確認いただけます。
         </p>
-        <iframe src="https://script.google.com/macros/s/AKfycbygdSyA1o5MlJCs0TNrZDTKDz45wFcaZKHJUY7socHGVuO8qDfD7WgsEkicDDUQPdPmXA/exec" frameborder="0"></iframe>
-    </div>
+        <iframe srcdoc="
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>チェック</title>
+          <script>
+            async function search() {
+              const email = document.getElementById('email').value;
+              const response = await fetch('https://script.google.com/macros/s/1HsRvvaUxoeId0qrmCdmQo4I0GNE2MhTdbGzxM0PemJI/exec?email=' + email);
+              const result = await response.json();
+              displayResult(result);
+            }
+    
+            function displayResult(result) {
+              if (result.message) {
+                document.getElementById('result').innerHTML = result.message;
+              } else {
+                document.getElementById('result').innerHTML = result.name + ' 様<br>' + result.date + ' に受信しました<br>' + result.message;
+              }
+            }
+          </script>
+        </head>
+        <body>
+          <input type='text' id='email' placeholder='メールアドレスを入力'>
+          <button onclick='search()'>検索</button>
+          <div id='result'></div>
+        </body>
+        </html>
+      " width="600" height="400"></iframe>        </div>
     
     <!-- フッターコンテンツ -->
     <div id="end">
