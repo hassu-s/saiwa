@@ -91,7 +91,7 @@ body{
     height: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     transform: translateX(100%);
-    transition: transform 0.4s ease-in-out; /* スライドイン/アウトアニメーション */
+    transition: transform 0.5s ease-in-out; /* スライドイン/アウトアニメーション */
     z-index: 99;
     border-radius: 5px;
 }
@@ -105,7 +105,7 @@ body{
 /* メニュー内リスト */
 #side-menu ul {
     list-style: none;
-    padding: 20px;
+    padding: 30px;
     padding-top: 50px;
 }
 
@@ -115,7 +115,7 @@ body{
     font-weight: bold;
     opacity: 0;
     transform: translateX(30px); /* 初期状態では右側にずらす */
-    transition: transform 0.3s ease, opacity 0.3s ease; /* 各アイテムのアニメーション */
+    transition: transform 1.0s ease, opacity 1.0s ease; /* 各アイテムのアニメーション */
 }
 
 #side-menu.open ul li {
@@ -184,7 +184,7 @@ body{
     text-align: center;
     background-color: rgb(0, 47, 255);
     padding: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 42.5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     box-shadow: 5px 5px 0px 0px rgb(103, 103, 103);

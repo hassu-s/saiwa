@@ -7,6 +7,36 @@
     <link href="../saiwa/css/all.css" rel="stylesheet" type="text/css">
     <link href="../css/all.css" rel="stylesheet" type="text/css">
     <script src="../saiwa-site/js/error.js"></script>
+
+    <style>
+        #main {
+            display: flex;
+            justify-content: center; /* これでコンテンツが右側に寄ります */
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        h1 {
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            text-align: left;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            font-size: 45px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
 </head>
 <body>
     <!-- ヘッダーメニューはじめ -->
@@ -29,11 +59,11 @@
 
     <div id="side-menu">
         <ul>
-            <li>TOP</li>
-            <li>ABOUT</li>
-            <li>INFO</li>
-            <li>REQUEST</li>
-            <li>FAQ</li>
+            <li><a href="../saiwa/index.html">TOP</a></li>
+            <li><a href="../saiwa/page/about.html">ABOUT</a></li>
+            <li><a href="../saiwa/page/INFO.html">INFO</a></li>
+            <li><a href="../saiwa/page/request.html">REQUEST</a></li>
+            <li><a href="../saiwa/page/faq.html">FAQ</a></li>
         </ul>
     </div>
     <div class="overlay" id="overlay"></div>
@@ -42,7 +72,9 @@
     <!-- ヘッダーメニューおわり -->
 
     <div id="all">
-        <h1>次は、<br>何をクリエイトしよう</h1>
+        <div id="main">
+            <h1>次の映像も<br>　輝くように描こうか。</h1>
+        </div>
     </div>
     
 
