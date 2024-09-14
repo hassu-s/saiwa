@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+
+* {
+    font-family: 'Shippori Antique' , sans-serif;
+    padding: 0;
+    margin: 0;
+
+    background-color: #ffffff00;
+    outline: none;
+
+    -webkit-tap-highlight-color: #ffffff00;
+    -webkit-focus-ring-color: #ffffff00;
+    outline: none;
+    word-break: break-all;
+
+    text-decoration: none;
+
+    color: rgb(50, 50, 50);
+}
+
+body{
+    padding: 25px;
+    background-color: aqua;
+}
+
+/* ヘッダー */
+#head {
+    position: fixed;
+    display: flex;
+    justify-content: space-between; /* 左右に配置 */
+    align-items: center; /* 垂直方向の中央揃え */
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%; /* 幅を90%に設定 */
+    height: 50px;
+    left: 50%; /* 左端を中央に */
+    transform: translateX(-50%); /* 中央に揃える */
+    border-radius: 100px;
+    top: 20px;
+    z-index: 10; /* トグルメニューより下に表示 */
+    margin-left: 25px;
+}
+#hdata {
+    padding-left: 30px;
+}
+
+/* ヘッダーメニュー */
+
+
+#head ul {
+    list-style: none; /* リストのスタイルをなしに */
+    display: flex; /* フレックスボックスで横並びに */
+    margin: 0; /* マージンをリセット */
+    padding: 0; /* パディングをリセット */
+}
+
+#head ul li {
+    margin: 0 15px; /* 各リストアイテムの間にスペースを追加 */
+    font-size: 16px; /* フォントサイズを設定 */
+    font-weight: bold; /* フォントを太字に */
+}
+
+/* トグルメニュー */
+#toggle-menu {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 30px;
+    top: 27px;
+    z-index: 100; /* 最上面に表示 */
+}
+
+#toggle-menu span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    margin: 6px 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+/* サイドメニュー */
+#side-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-width: 250px;
+    width: 33%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out; /* スライドイン/アウトアニメーション */
+    z-index: 99;
+    border-radius: 5px;
+}
+
+
+/* サイドメニュー表示時 */
+#side-menu.open {
+    transform: translateX(0); /* メニューがスライドイン */
+}
+
+/* メニュー内リスト */
+#side-menu ul {
+    list-style: none;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+#side-menu ul li {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateX(30px); /* 初期状態では右側にずらす */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* 各アイテムのアニメーション */
+}
+
+#side-menu.open ul li {
+    opacity: 1;
+    transform: translateX(0); /* 表示時にフェードイン＆スライドイン */
+}
+
+/* トグルメニュー開閉時 */
+#toggle-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 9px);
+}
+
+#toggle-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#toggle-menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -9px);
+}
+
+/* 背景オーバーレイ */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease; /* フェードイン/アウトアニメーション */
+    z-index: 98; /* サイドメニューの背面に表示 */
+}
+
+.overlay.show {
+    display: block;
+    opacity: 1; /* フェードイン */
+}
+
+.overlay.hide {
+    opacity: 0; /* フェードアウト */
+    pointer-events: none;
+}
+
+@media (max-width: 500px) {
+    #hdata {
+      display: none;
+    }
+  }
+
+@media (min-width: 501px) {
+    #toggle-menu {
+      display: none;
+    }
+  }
+  
+
+
+#all {
+    padding-top: 60px;
+}
+
