@@ -19,7 +19,6 @@
 }
 
 body{
-    padding: 25px;
     background-color: #f8f8f8;
 }
 
@@ -175,7 +174,24 @@ body{
 
 
 #all {
-    padding-top: 60px;
+    padding: 25px;
+    padding-top: 85px;
+}
+
+#end {
+    width: 100%;
+    background-color: aqua;
+}
+#inend {
+    padding: 50px;
+}
+.copyc{
+    text-align: center;
+}
+.copy {
+    font-size: 10px;
+    position: relative;
+    top: -5px;
 }
 
 
@@ -215,4 +231,8 @@ button:hover {
 }
 button a {
     color: #f8f8f8;
+}
+
+p {
+    font-size: 16px;
 }
