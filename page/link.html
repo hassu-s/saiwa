@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>倖ˢᵃᶦʷᵃ</title>
+    <title>リンク | 倖ˢᵃᶦʷᵃ</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../saiwa/css/all.css" rel="stylesheet" type="text/css">
@@ -44,42 +44,10 @@
 
     <div id="all">
         <div class="title">
-            <h1>CHECK</h1>
+            <h1 class="the">LINK</h1>
         </div>
-        <p>
-            ご依頼の可否をご確認いただけます。<br>
-            下記のフォームにご依頼でご使用されたメールアドレスを送信すると、可否の状況をご確認いただけます。
-        </p>
-        <iframe srcdoc="
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <title>チェック</title>
-          <script>
-            async function search() {
-              const email = document.getElementById('email').value;
-              const response = await fetch('https://script.google.com/macros/s/152UWKrhWSHC0g0Stqvm3Yxms9T-WV9VP-1thtZIFSVO5zXQpBQagmz7T/exec?email=' + email);
-              const result = await response.json();
-              displayResult(result);
-            }
-    
-            function displayResult(result) {
-              if (result.message) {
-                document.getElementById('result').innerHTML = result.message;
-              } else {
-                document.getElementById('result').innerHTML = result.name + ' 様<br>' + result.date + ' に受信しました<br>' + result.message;
-              }
-            }
-          </script>
-        </head>
-        <body>
-          <input type='text' id='email' placeholder='メールアドレスを入力'>
-          <button onclick='search()'>検索</button>
-          <div id='result'></div>
-        </body>
-        </html>
-      " width="600" height="400"></iframe>
     </div>
+
     
     <!-- フッターコンテンツ -->
     <div id="end">
