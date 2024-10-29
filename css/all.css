@@ -99,9 +99,10 @@ h1 {
 
     display: flex;
     justify-content: center;
+    box-shadow: 0 0 2px 0 #313131;
 }
 .logo2 {
-    background-color: aqua;
+    background-color: rgb(255, 255, 255);
     padding: 10px;
     border-radius: 50%;
     height: 20px;
@@ -110,6 +111,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 2px 0 #313131;
+
 }
 .logo3 {
     background-color: #fff;
@@ -121,6 +124,8 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 2px 0 #313131;
+
 }
 
 .xlogo {
@@ -128,7 +133,7 @@ h1 {
     display: flex;
 }
 .ylogo {
-    width: 30px;
+    width: 28px;
     display: flex;
 }
 .tlogo {
