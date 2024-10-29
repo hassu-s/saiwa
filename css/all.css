@@ -275,3 +275,18 @@ hr {
 .noned.open {
     max-height: 200px; /* Set an appropriate max-height */
 }
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    border:solid #ffffffff ;
+    border-radius: 5px;
+
+    outline: none;
+
+    box-shadow: 0 0 1px 0 #343434;
+}
