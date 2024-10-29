@@ -1,88 +1,35 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>倖ˢᵃᶦʷᵃ</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../saiwa/css/all.css" rel="stylesheet" type="text/css">
-    <link href="../css/all.css" rel="stylesheet" type="text/css">
-    <script src="../saiwa-site/js/error.js"></script>
-
-    <style>
-        #main {
-            display: flex;
-            justify-content: center; /* これでコンテンツが右側に寄ります */
-            width: 100%;
-            height: 510px;
-            padding-top: 20px;
-        }
-
-        h1 {
-            writing-mode: vertical-rl;
-            text-orientation: upright;
-            text-align: left;
-            opacity: 0;
-            animation: fadeIn 2s forwards;
-            font-size: 45px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-    </style>
+    <title>倖ˢᵃᶦʷᵃ</title>
+    <link href="/css/all.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <!-- ヘッダーメニューはじめ -->
-    <div id="head">
-        <div id="hdata">
-            <ul>
-                <li><a href="../saiwa/index.html">TOP</a></li>
-                <li><a href="../saiwa/page/about.html">ABOUT</a></li>
-                <li><a href="../saiwa/page/INFO.html">INFO</a></li>
-                <li><a href="../saiwa/page/request.html">REQUEST</a></li>
-                <li><a href="../saiwa/page/faq.html">FAQ</a></li>
-            </ul>
+    <div class="head">
+        <h1>SAIWA OFFICIAL</h1>
+        <div class="page">
+            <a class="alink" href="">TOP</a>
+            <a class="alink" href="">NEWS</a>
+            <a class="alink" href="">CONTACT</a>
         </div>
     </div>
-    <div id="toggle-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div> <!-- トグルメニューアイコン -->
+    <div class="mes">
+        <img class="imglogo" src="/img/main/icon.jpg" alt="倖アイコン">
+    </div>
+    <div class="head">
+        <h2>倖ˢᵃᶦʷᵃ</h2>
+        <p>
+            ここに説明文が入ります。
+        </p><br>
+            <div class="sns">
+                <div class="logo1"><a href=""><img class="xlogo" src="/img/sns/xlogo.png" alt=""></a></div>
+                <div class="logo2"><a href=""><img class="ylogo" src="/img/sns/ylogo.png" alt=""></a></div>
+                <div class="logo3"><a href=""><img class="tlogo" src="/img/sns/tlogo.webp" alt=""></a></div>
+            </div>
+        </div>
 
-    <div id="side-menu">
-        <ul>
-            <li><a href="../saiwa/index.html">TOP</a></li>
-            <li><a href="../saiwa/page/about.html">ABOUT</a></li>
-            <li><a href="../saiwa/page/INFO.html">INFO</a></li>
-            <li><a href="../saiwa/page/request.html">REQUEST</a></li>
-            <li><a href="../saiwa/page/faq.html">FAQ</a></li>
-        </ul>
-    </div>
-    <div class="overlay" id="overlay"></div>
-    <script src="../saiwa/js/header.js"></script>
-    <script src="../js/header.js"></script>
-    <!-- ヘッダーメニューおわり -->
 
-    <div id="all">
-        <div id="main">
-            <h1>次の映像も<br>　輝くように描こうか。</h1>
-        </div>
-    </div>
-    
-    <!-- フッターコンテンツ -->
-    <div id="end">
-        <div id="inend">
-            <p class="copyc">©倖<a class="copy">SAIWA</a></p>
-        </div>
-    </div>
 </body>
 </html>
