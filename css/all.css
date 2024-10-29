@@ -16,7 +16,11 @@
     text-decoration: none;
 
     color: #313131;
+
+    overflow: -moz-scrollbars-none; /* Firefoxでスクロールバーを非表示にする */
+    -ms-overflow-style: none; /* IEとEdgeでスクロールバーを非表示にする */
 }
+
 .all {
     margin: 10px;
 }
