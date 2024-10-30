@@ -27,6 +27,7 @@
 body{
     background-color: #cecece;
     overflow: auto;
+    overflow-x: hidden;
 
     overflow: -moz-scrollbars-none; /* Firefoxでスクロールバーを非表示にする */
     -ms-overflow-style: none; /* IEとEdgeでスクロールバーを非表示にする */
