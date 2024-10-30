@@ -19,6 +19,8 @@
 
     overflow: -moz-scrollbars-none; /* Firefoxでスクロールバーを非表示にする */
     -ms-overflow-style: none; /* IEとEdgeでスクロールバーを非表示にする */
+
+    overflow-x: hidden;
 }
 
 .all {
