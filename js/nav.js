@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
             height: 100%;
             background-color: rgba(51, 51, 51, 0.95);
             backdrop-filter: blur(10px);
-            z-index: 2;
+            z-index: 12;
             transition: transform 0.4s ease;
             display: flex;
             flex-direction: column;
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         #nav-menu a {
             color: white;
             text-decoration: none;
-            padding-top: 20px;
+            padding: 10px;
             font-size: 20px;
         }
 
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             width: 100%;
             height: 100%;
             background-color: rgba(203, 203, 203, 0.7);
-            z-index: 1;
+            z-index: 11;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.4s ease;
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         #nav-hamburger.toggle .nav-bar:nth-child(1) {
-            transform: rotate(-45deg) translate(-9.5px, 5px);
+            transform: rotate(-45deg) translate(-10px, 5px);
         }
 
         #nav-hamburger.toggle .nav-bar:nth-child(2) {
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         #nav-hamburger.toggle .nav-bar:nth-child(3) {
-            transform: rotate(45deg) translate(-9.5px, -5px);
+            transform: rotate(45deg) translate(-10px, -5px);
         }
 
         @media (max-width: 450px) {

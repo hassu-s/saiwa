@@ -1,11 +1,11 @@
 * {
     font-family: source-han-sans-japanese , sans-serif;
     word-wrap: break-word;
+    overflow-x: hidden;
 }
 body {
     margin: 0;
 }
 #all {
-    padding: 10px;
     box-sizing: border-box;
 }
