@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>背景色アニメーション</title>
+<style>
+body {
+    writing-mode: vertical-rl;
+}
+
+h1 {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: black;
+}
+
+h1 span {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: backgroundChange 1s ease forwards;
+}
+
+h1 span:nth-child(1)::before {
+    animation-delay: 0s;
+}
+
+h1 span:nth-child(2)::before {
+    animation-delay: 0.5s;
+}
+
+h1 span:nth-child(3)::before {
+    animation-delay: 1s;
+}
+
+@keyframes backgroundChange {
+    0% { transform: translateY(-100%); }
+    50% { transform: translateY(100%); }
+    100% { transform: translateY(100%); }
+}
+</style>
+</head>
+<body>
+
+<h1>
+    <span>背景色が</span><br>
+    <span>アニメーション</span><br>
+    <span>します</span>
+</h1>
+
+</body>
+</html>

@@ -4,48 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>倖ˢᵃᶦʷᵃ</title>
-    <link href="./css/all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href=".../css/all.css">
+    <script>
+        (function(d) {
+        var config = {
+            kitId: 'pdm6bur',
+            scriptTimeout: 3000,
+            async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+
+    <style>
+        * {
+            font-family: source-han-sans-japanese , sans-serif;
+
+        }
+        .top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+        h1 {
+            writing-mode: vertical-rl;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            color: black;
+        }
+
+        h1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            animation: backgroundChange 2s ease forwards;
+        }
+
+        @keyframes backgroundChange {
+            0% { transform: translateY(-100%); }
+            50% { transform: translateY(100%); }
+            100% { transform: translateY(100%); }
+        }
+        .scall {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .sc {
+            border: 1px solid #3e85ff;
+            background-color: #3e85ff2c;
+            margin-top: 50px;
+            width: 300px;
+            color: #3168c7;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+        }
+    </style>
 </head>
 <body>
+    <script src="./js/nav.js"></script>
     <div class="all">
-    <div class="heada">
-        <h1>SAIWA OFFICIAL</h1>
-        <div class="page">
-            <a class="alink" href="#">TOP</a>
-            <a class="alink" href="https://hassu-s.github.io/saiwa/html/news">NEWS</a>
-            <a class="alink" href="">CONTACT</a>
+        <div class="top">
+            <h1>動画をつくる、世界にとどく。</h1>
         </div>
+        <div class="scall"><p class="sc"><strong>▼ SCROLL ▼</strong></p></div>
     </div>
-    <div class="mes">
-        <img class="imglogo" src="./img/main/icon.jpg" alt="倖アイコン">
-    </div>
-    <div class="head">
-        <h2>倖ˢᵃᶦʷᵃ</h2>
-        <p>
-            ここに説明文が入ります。
-        </p><br>
-            <div class="sns">
-                <div class="logo1"><a href=""><img class="xlogo" src="./img/sns/xlogo.png" alt="Xアイコン"></a></div>
-                <div class="logo2"><a href=""><img class="ylogo" src="./img/sns/ylogo.png" alt="YouTubeアイコン"></a></div>
-                <div class="logo3"><a href=""><img class="tlogo" src="./img/sns/tlogo.webp" alt="TikTokアイコン"></a></div>
-            </div>
-    </div>
-    <div class="headn">
-        <p>イベント開催中！試験</p>
-        <!-- ここは特別記入欄 -->
-    </div>
-    <div class="head">
-        <p>動画制作の依頼はこちらから！</p>
-        <button>依頼画面へ行く</button>
-    </div>
-</div>
-    <div class="ft">
-        <div class="li">
-            <a href="" class="ftf">利用規約</a>
-            <a href="" class="ftf">プライバシーポリシー</a>
-        </div>
-        <p class="copy">© 倖ˢᵃᶦʷᵃ</p>
-    </div>
-
 </body>
 </html>
