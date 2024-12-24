@@ -38,6 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
             height: 45px;
             border-top-left-radius: 10px;
             border-bottom-right-radius: 10px;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            right: 0;
         }
 
         #nav-links {
